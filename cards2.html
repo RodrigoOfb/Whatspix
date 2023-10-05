@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      src="https://kit.fontawesome.com/021532d534.js"
+      crossorigin="anonymous"
+    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
@@ -169,17 +173,39 @@
       kwaiq.instance("533140247879360579").track("contentView");
       kwaiq.instance("533140526611832843").track("contentView");
       kwaiq.instance("533141350687719431").track("contentView");
+
+      $(document).ready(function () {
+        myFunction();
+        var card2 = $("#saldo-card2");
+        var card1inicial = 34;
+
+        function chamar1() {
+          if (card1inicial <= 62) {
+            console.log("a");
+            card2.html(card1inicial);
+            card1inicial++;
+            setTimeout(chamar1, 70);
+          }
+        }
+
+        chamar1();
+      });
     </script>
+
     <title>WhatsPix</title>
   </head>
   <body>
+    <div id="snackbar">
+      <i class="fa-solid fa-circle-check" style="color: #3cff14"></i> R$ 28,00
+      adicionado a carteira!
+    </div>
     <header>
       <div class="header-top">
         <div class="icon-header">
           <img src="https://www.whats-pix.me/img/logo.262d97ef.png" alt="" />
         </div>
         <div class="salddoHeader">
-          <h1>R$ <span id="saldo">56,13</span></h1>
+          <h1>R$ <span id="saldo-card2">34</span></h1>
         </div>
       </div>
       <div class="header-bottom">
@@ -216,7 +242,7 @@
                 border-radius: 10px;
               "
             >
-              Gerar Relatório - R$ 29,56
+              Gerar Relatório - R$ 34
             </p>
           </div>
         </div>
@@ -243,7 +269,7 @@
                 border-radius: 10px;
               "
             >
-              Gerar Relatório - R$ 32,81
+              Gerar Relatório - R$ 28
             </p>
           </div>
         </div>
@@ -270,7 +296,7 @@
                 border-radius: 10px;
               "
             >
-              Gerar Relatório - R$ 23,21
+              Gerar Relatório - R$ 38
             </p>
           </div>
         </div>

@@ -11,6 +11,10 @@ body {
 }
 header {
   background-color: #128c7e;
+  display: flex;
+  justify-content: center;
+
+  flex-direction: column;
 }
 .header-top {
   display: flex;
@@ -19,18 +23,20 @@ header {
   margin-bottom: 20px;
 }
 .icon-header img {
-  width: 40px;
+  width: 60px;
 }
 .salddoHeader {
   background-color: white;
   width: 130px;
   display: flex;
-  border-radius: 20px;
+  border-radius: 15px;
   justify-content: center;
+  margin-top: 10px;
   align-items: center;
+  height: 40px;
 }
 .salddoHeader h1 {
-  font-size: 15px;
+  font-size: 23px;
   font-weight: normal;
 }
 .header-bottom {
@@ -93,6 +99,7 @@ header {
   color: white;
   font-size: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
   animation: pulse 2s infinite;
 }
 @keyframes pulse {
@@ -156,6 +163,7 @@ header {
   font-size: 20px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   animation: pulse 2s infinite;
+  font-weight: bold;
 }
 .d-none {
   display: none;
@@ -369,6 +377,7 @@ a {
   height: 50px;
   font-size: 17px;
   transform: all 0.3s ease;
+  font-weight: bold;
 }
 .meuBotao {
   border-radius: 10px;
@@ -382,13 +391,14 @@ a {
 .resposta {
   background-color: #128c7e;
   width: 100%;
-  height: 30px;
+  height: 40px;
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   border: none;
   border-radius: 8px;
   margin-bottom: 20px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  font-weight: bold;
 }
 .card-more {
   width: 95%;
@@ -425,6 +435,7 @@ a {
   animation-duration: 7s;
   animation-iteration-count: 1; /* Executa a animação apenas uma vez */
   animation-fill-mode: forwards; /* Faz a animação parar no estado final */
+  text-align: right;
 }
 
 @keyframes progress {
@@ -435,6 +446,7 @@ a {
     width: 90%;
   }
 }
+
 .card-more h1 {
   font-size: 15px;
   font-weight: normal;
@@ -444,10 +456,13 @@ a {
   font-size: 23px;
   margin-bottom: 10px;
   margin-bottom: 20px;
+  color: #535555;
+  font-weight: bold;
 }
 .card-more button {
   width: 100%;
-  height: 30px;
+  height: 39px;
+  font-size: 18px;
   background-color: #128c7e;
   color: white;
   border: none;
@@ -456,6 +471,7 @@ a {
   margin-bottom: 20px;
   animation: pulse 2s infinite;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
 }
 .disable a {
   width: 90%;
@@ -484,4 +500,60 @@ a {
   align-items: center;
   text-align: center;
   font-weight: normal;
+}
+.inf-vsl {
+  display: flex;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  justify-content: center;
+  font-size: 15px;
+  gap: 10px;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: white; /* Black background color */
+  color: #333; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  top: 50px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 50px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 50px;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
 }

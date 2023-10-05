@@ -30,3 +30,27 @@ $(".resposta-bra").click(function (params) {
   $("bradescoCard").addClass(".disable");
   window.location.href = "./cards3.html";
 });
+var numeroElement = document.getElementById("numero");
+var numeroAtual = 0;
+
+function mostrarProximoNumero() {
+  if (numeroAtual <= 90) {
+    numeroElement.innerHTML = numeroAtual + "%";
+    numeroAtual++;
+    setTimeout(mostrarProximoNumero, 70); // Mostrar próximo número a cada segundo (1000 ms)
+  }
+  // Iniciar a contagem
+}
+mostrarProximoNumero();
+function myFunction() {
+  // Get the snackbar DIV
+  var x = $("#snackbar");
+  console.log("aa");
+  // Add the "show" class to DIV
+  x.addClass("show");
+
+  // After 3 seconds, remove the show class from DIV
+  setTimeout(function () {
+    x.removeClass("show");
+  }, 3000);
+}
