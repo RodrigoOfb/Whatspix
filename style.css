@@ -337,8 +337,8 @@ a {
   background-color: #d91111;
 }
 .none {
-  filter: brightness(50%);
-  pointer-events: none;
+  background-color: #535555 !important;
+  pointer-events: none !important;
 }
 .emojis {
   margin-top: 20px;
