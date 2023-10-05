@@ -6,6 +6,7 @@ $(".continuar").on("click", function () {
   cardWelcome.classList.add("d-none");
   $("#name").html(sessionStorage.getItem("inputName"));
   cardPrazer.classList.remove("d-none");
+  $(document).scrollTop(0);
 });
 function changeSize(element) {
   element.classList.toggle("enlarged");
