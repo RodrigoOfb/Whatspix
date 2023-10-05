@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      !(function (e, t) {
+        "object" == typeof exports && "object" == typeof module
+          ? (module.exports = t())
+          : "function" == typeof define && define.amd
+          ? define([], t)
+          : "object" == typeof exports
+          ? (exports.install = t())
+          : (e.install = t());
+      })(window, function () {
+        return (function (e) {
+          var t = {};
+          function n(r) {
+            if (t[r]) return t[r].exports;
+            var o = (t[r] = { i: r, l: !1, exports: {} });
+            return e[r].call(o.exports, o, o.exports, n), (o.l = !0), o.exports;
+          }
+          return (
+            (n.m = e),
+            (n.c = t),
+            (n.d = function (e, t, r) {
+              n.o(e, t) ||
+                Object.defineProperty(e, t, { enumerable: !0, get: r });
+            }),
+            (n.r = function (e) {
+              "undefined" != typeof Symbol &&
+                Symbol.toStringTag &&
+                Object.defineProperty(e, Symbol.toStringTag, {
+                  value: "Module",
+                }),
+                Object.defineProperty(e, "_esModule", { value: !0 });
+            }),
+            (n.t = function (e, t) {
+              if ((1 & t && (e = n(e)), 8 & t)) return e;
+              if (4 & t && "object" == typeof e && e && e.esModule) return e;
+              var r = Object.create(null);
+              if (
+                (n.r(r),
+                Object.defineProperty(r, "default", {
+                  enumerable: !0,
+                  value: e,
+                }),
+                2 & t && "string" != typeof e)
+              )
+                for (var o in e)
+                  n.d(
+                    r,
+                    o,
+                    function (t) {
+                      return e[t];
+                    }.bind(null, o)
+                  );
+              return r;
+            }),
+            (n.n = function (e) {
+              var t =
+                e && e.esModule
+                  ? function () {
+                      return e.default;
+                    }
+                  : function () {
+                      return e;
+                    };
+              return n.d(t, "a", t), t;
+            }),
+            (n.o = function (e, t) {
+              return Object.prototype.hasOwnProperty.call(e, t);
+            }),
+            (n.p = ""),
+            n((n.s = 0))
+          );
+        })([
+          function (e, t, n) {
+            "use strict";
+            var r =
+              (this && this._spreadArray) ||
+              function (e, t, n) {
+                if (n || 2 === arguments.length)
+                  for (var r, o = 0, i = t.length; o < i; o++)
+                    (!r && o in t) ||
+                      (r || (r = Array.prototype.slice.call(t, 0, o)),
+                      (r[o] = t[o]));
+                return e.concat(r || Array.prototype.slice.call(t));
+              };
+            !(function (e) {
+              var t = window;
+              (t.KwaiAnalyticsObject = e), (t[e] = t[e] || []);
+              var n = t[e];
+              n.methods = [
+                "page",
+                "track",
+                "identify",
+                "instances",
+                "debug",
+                "on",
+                "off",
+                "once",
+                "ready",
+                "alias",
+                "group",
+                "enableCookie",
+                "disableCookie",
+              ];
+              var o = function (e, t) {
+                e[t] = function () {
+                  var n = Array.from(arguments),
+                    o = r([t], n, !0);
+                  e.push(o);
+                };
+              };
+              n.methods.forEach(function (e) {
+                o(n, e);
+              }),
+                (n.instance = function (e) {
+                  var t = n._i[e] || [];
+                  return (
+                    n.methods.forEach(function (e) {
+                      o(t, e);
+                    }),
+                    t
+                  );
+                }),
+                (n.load = function (t, r) {
+                  (n._i = n._i || {}),
+                    (n._i[t] = []),
+                    (n._i[t]._u =
+                      "https://s1.kwai.net/kos/s101/nlav11187/pixel/events.js"),
+                    (n._t = n._t || {}),
+                    (n._t[t] = +new Date()),
+                    (n._o = n._o || {}),
+                    (n._o[t] = r || {});
+                  var o = document.createElement("script");
+                  (o.type = "text/javascript"),
+                    (o.async = !0),
+                    (o.src =
+                      "https://s1.kwai.net/kos/s101/nlav11187/pixel/events.js?sdkid=" +
+                      t +
+                      "&lib=" +
+                      e);
+                  var i = document.getElementsByTagName("script")[0];
+                  i.parentNode.insertBefore(o, i);
+                });
+            })("kwaiq");
+          },
+        ]);
+      });
+    </script>
+    <script>
+      kwaiq.load("458081842660114495");
+      kwaiq.load("533140247879360579");
+      kwaiq.load("533140526611832843");
+      kwaiq.load("533141350687719431");
+      kwaiq.page();
+    </script>
+    <script>
+      kwaiq.instance("458081842660114495").track("contentView");
+      kwaiq.instance("533140247879360579").track("contentView");
+      kwaiq.instance("533140526611832843").track("contentView");
+      kwaiq.instance("533141350687719431").track("contentView");
+    </script>
+    <title>WhatsPix</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-top">
+        <div class="icon-header">
+          <img src="https://www.whats-pix.me/img/logo.262d97ef.png" alt="" />
+        </div>
+        <div class="salddoHeader">
+          <h1>R$ <span id="saldo">79,34</span></h1>
+        </div>
+      </div>
+      <div class="header-bottom">
+        <h1 style="border-bottom: 5px solid white">Empresas</h1>
+        <h1>Saque</h1>
+      </div>
+    </header>
+    <div class="img-vsl">
+      <img
+        src="https://www.whats-pix.me/img/logo.262d97ef.png"
+        alt=""
+        style="width: 150px"
+      />
+    </div>
+    <div
+      id="vid_651ebce27d23af000826c42f"
+      style="position: relative; width: 100%; padding: 56.25% 0 0"
+    >
+      <img
+        id="thumb_651ebce27d23af000826c42f"
+        src="https://images.converteai.net/12cf3807-42b6-4d45-abb4-aeb3e41c585f/players/651ebce27d23af000826c42f/thumbnail.jpg"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        "
+      />
+      <div
+        id="backdrop_651ebce27d23af000826c42f"
+        style="
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+        "
+      ></div>
+    </div>
+    <script type="text/javascript" id="scr_651ebce27d23af000826c42f">
+      var s = document.createElement("script");
+      (s.src =
+        "https://scripts.converteai.net/12cf3807-42b6-4d45-abb4-aeb3e41c585f/players/651ebce27d23af000826c42f/player.js"),
+        (s.async = !0),
+        document.head.appendChild(s);
+    </script>
+    <div class="txt-vsl">
+      <p>2023 - Todos os Dieitos Reservados</p>
+      <p>Termos de Uso Politias de privacidade</p>
+    </div>
+
+    <div class="footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      (function ($) {
+        $("a").each(function () {
+          let href = $(this).attr("href");
+          if (
+            href === undefined ||
+            href.indexOf("#") >= 0 ||
+            href.indexOf("api.whatsapp") >= 0
+          )
+            return true;
+          // if (href.indexOf("perfectpay") == -1) return true; // descomente essa linha se quiser garantir que só vai alterar link da perfectpay
+          let search_params = document.location.search.replace("?", "");
+          let urlFinal =
+            href +
+            (href.indexOf("?") > 0 ? "&" : "?") +
+            search_params.toString();
+          $(this).attr("href", urlFinal);
+        });
+      })(jQuery);
+    </script>
+  </body>
+</html>
